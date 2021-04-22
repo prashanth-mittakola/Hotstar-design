@@ -245,7 +245,10 @@ footer{
   min-height:100px;
   background-color:#151515;
   font-size: 18px;
-  color:white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-text{
   text-align: center;
