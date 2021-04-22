@@ -291,6 +291,13 @@ footer.active{
   .menu-container {
     display: none;
   }
+  .profile-text-container {
+    margin: 0 0.5rem;
+  }
+  .profile-container {
+    position: absolute;
+    right: 20px;
+  }
   i.arrow {
     font-size: 75px;
   }
