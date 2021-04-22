@@ -246,7 +246,9 @@ footer{
   background-color:#151515;
   font-size: 18px;
   color:white;
-  text-align:center;
+}
+.footer-text{
+  text-align: center;
 }
 
 /* WhiteBackGround */
