@@ -20,7 +20,7 @@ arrows.forEach((arrow, i) => {
 // For White Theme
 // const toggleBall = document.querySelector(".toggle");
 const toToggleItems = document.querySelectorAll(
-  ".toggle, .toggle-ball, h2, .sidebar, .navbar-container, .container"
+  ".toggle, .toggle-ball, h2, .sidebar, .navbar-container, .container, footer"
 );
 document.querySelector(".toggle").addEventListener("click", () => {
   toToggleItems.forEach((item) => {
