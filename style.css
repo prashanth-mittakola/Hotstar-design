@@ -286,3 +286,13 @@ footer.active{
   color:black
 }
 
+/* Responsive */
+@media only screen and (max-width: 765px) {
+  .menu-container {
+    display: none;
+  }
+  i.arrow {
+    font-size: 75px;
+  }
+}
+
