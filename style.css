@@ -244,6 +244,11 @@ i.arrow:hover {
 footer{
   min-height:100px;
   background-color:#151515;
+  font-size: 18px;
+  color:white;
+}
+.footer-text{
+  text-align:center;
 }
 
 /* WhiteBackGround */
@@ -275,4 +280,6 @@ h2.active {
 }
 footer.active{
   background-color:white;
+  color:black
 }
+
