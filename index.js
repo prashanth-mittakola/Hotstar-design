@@ -1,3 +1,4 @@
+console.log("Hi");
 const arrows = document.querySelectorAll("i.arrow");
 const movieList = document.querySelectorAll(".movie-list");
 
