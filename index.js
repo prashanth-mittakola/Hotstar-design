@@ -1,4 +1,3 @@
-console.log("Hi");
 const arrows = document.querySelectorAll("i.arrow");
 const movieList = document.querySelectorAll(".movie-list");
 
@@ -7,22 +6,42 @@ arrows.forEach((arrow, i) => {
   let clickCounter = 0;
   arrow.addEventListener("click", () => {
     clickCounter++;
-    let valueOfX = movieList[i].computedStyleMap().get("transform")[0].x.value;
-    if (movieItemsLength - (5 + clickCounter) >= 0) {
-      movieList[i].style.transform = `translateX(${valueOfX - 290}px)`;
+    let ratio = window.innerWidth / 270;
+    if (window.innerWidth <= 765) {
+      let valueOfX = movieList[i].computedStyleMap().get("transform")[0].x
+        .value;
+      if (movieItemsLength - (5 + clickCounter) + (5 - ratio) >= 0) {
+        movieList[i].style.transform = `translateX(${valueOfX - 290}px)`;
+      } else {
+        movieList[i].style.transform = "translateX(0)";
+        clickCounter = 0;
+      }
     } else {
-      movieList[i].style.transform = "translateX(0)";
-      clickCounter = 0;
+      let valueOfX = movieList[i].computedStyleMap().get("transform")[0].x
+        .value;
+      if (movieItemsLength - (5 + clickCounter) >= 0) {
+        movieList[i].style.transform = `translateX(${valueOfX - 290}px)`;
+      } else {
+        movieList[i].style.transform = "translateX(0)";
+        clickCounter = 0;
+      }
     }
+    // let valueOfX = movieList[i].computedStyleMap().get("transform")[0].x.value;
+    // if (movieItemsLength - (5 + clickCounter) >= 0) {
+    //   movieList[i].style.transform = `translateX(${valueOfX - 290}px)`;
+    // } else {
+    //   movieList[i].style.transform = "translateX(0)";
+    //   clickCounter = 0;
+    // }
   });
 });
 
 // For White Theme
-// const toggleBall = document.querySelector(".toggle");
+const toggleBall = document.querySelector(".toggle");
 const toToggleItems = document.querySelectorAll(
   ".toggle, .toggle-ball, h2, .sidebar, .navbar-container, .container, footer"
 );
-document.querySelector(".toggle").addEventListener("click", () => {
+toggleBall.addEventListener("click", () => {
   toToggleItems.forEach((item) => {
     item.classList.toggle("active");
   });
